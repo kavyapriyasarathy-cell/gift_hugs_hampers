@@ -1,0 +1,31 @@
+name: Docker Image CI
+
+on:
+push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    
+joblogin:
+
+  build:
+
+     runs-on: ubuntu-latest
+     steps:
+     - uses: actions/checkout@v4
+     - name: Docker login
+       run: docker login -u kavipriya28 -p dckr_pat_W5snltK-M7TszmOf12TCFbgT1T4
+
+jobdocker:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+
+
+    
