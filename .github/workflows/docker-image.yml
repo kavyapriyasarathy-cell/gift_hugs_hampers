@@ -5,10 +5,11 @@ push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-    
-joblogin:
 
-  build:
+jobs:
+
+joblogin:
+ build:
 
      runs-on: ubuntu-latest
      steps:
