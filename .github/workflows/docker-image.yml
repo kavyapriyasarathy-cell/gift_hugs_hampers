@@ -15,7 +15,7 @@ jobs:
      - name: Docker login
        run: docker login -u kavipriya28 -p dckr_pat_W5snltK-M7TszmOf12TCFbgT1T4
      - name: Docker pull
-       run: 
+       run: docker pull kavipriya28/docker-learning:latest
 
  jobdocker:
     runs-on: ubuntu-latest
