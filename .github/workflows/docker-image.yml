@@ -13,7 +13,7 @@ jobs:
      steps:
      - uses: actions/checkout@v4
      - name: Docker login
-       run: docker login -u ${{ secrets.username }} -p ${{ secrets.password }}
+       run: docker login -u ${{ secrets.user_name }} -p ${{ secrets.password }}
      - name: Docker pull
        run: docker pull kavipriya28/docker-learning:latest
 
